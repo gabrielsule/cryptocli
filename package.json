@@ -1,0 +1,58 @@
+{
+  "name": "cryptocli",
+  "description": "Buscador de valores de cryptomonedas",
+  "version": "1.0.0",
+  "author": "Administrator @gabrielsule",
+  "bin": {
+    "cryptocli": "./bin/run"
+  },
+  "bugs": "https://github.com/gabrielsule/cryptocli/issues",
+  "dependencies": {
+    "@oclif/command": "^1.5.18",
+    "@oclif/config": "^1.13.2",
+    "@oclif/plugin-help": "^2.2.0",
+    "cli-table": "^0.3.1",
+    "cli-ux": "^5.3.1",
+    "moment": "^2.24.0",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.22.0",
+    "eslint": "^5.16.0",
+    "eslint-config-oclif": "^3.1.0",
+    "globby": "^10.0.1",
+    "rimraf": "^2.6.3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/gabrielsule/cryptocli",
+  "keywords": [
+    "oclif",
+    "node",
+    "javascript"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "cryptocli",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "gabrielsule/cryptocli",
+  "scripts": {
+    "postpack": "rimraf oclif.manifest.json",
+    "posttest": "eslint .",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
